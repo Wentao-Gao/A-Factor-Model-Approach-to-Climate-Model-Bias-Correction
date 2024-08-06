@@ -14,7 +14,7 @@ which do not need to assume "All variable are observed". We gonna show our code 
 based on the summary causal graph as Figure(c) below shows.
 
 
-![Figure1](figures/Summary causal graph.png)
+![Figure2](figures/Summary%20causal%20graph.png)
 
 As for case study real world dataset, can be download from the link below:
 
@@ -22,9 +22,8 @@ As for case study real world dataset, can be download from the link below:
 
 - NCEP-NCAR reanalysis 1 data portal: https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html
 
-![factor model](figures/factor model.png)
+![factor model](figures/factor%20model.png)
   
-<img width="919" alt="factor model" src="https://github.com/user-attachments/assets/2c382f0c-b689-4538-a59e-e08325dde1b7">
 
 ## Correcrtion
 
