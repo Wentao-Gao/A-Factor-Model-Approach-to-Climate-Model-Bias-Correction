@@ -4,8 +4,6 @@ This code is for AAAI submission paper: A-deconfounding-approach-to-climate-mode
 
 As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
 
-<img width="1310" alt="Process" src="https://github.com/user-attachments/assets/30942574-8fee-4c72-9e9e-54e71bf7daf1">
-
 ![Figure1](figures/Process.png)
 
 
@@ -15,8 +13,8 @@ First part is most import part as it is the first time to bring some insight fro
 which do not need to assume "All variable are observed". We gonna show our code with the simulation dataset. The simulation dataset is created 
 based on the summary causal graph as Figure(c) below shows.
 
-![Summary causal graph](figures/Summary causal graph.png)
 
+![Figure1](figures/Summary causal graph.png)
 
 As for case study real world dataset, can be download from the link below:
 
