@@ -5,7 +5,9 @@ This code is for AAAI submission paper: A-deconfounding-approach-to-climate-mode
 As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
 
 <img width="1310" alt="Process" src="https://github.com/user-attachments/assets/30942574-8fee-4c72-9e9e-54e71bf7daf1">
-![Process](figures/Process.png)
+
+![Figure1](figures/Process.png)
+
 
 ## Deconfounding
 
@@ -14,8 +16,6 @@ which do not need to assume "All variable are observed". We gonna show our code 
 based on the summary causal graph as Figure(c) below shows.
 
 ![Summary causal graph](figures/Summary causal graph.png)
-
-<img width="611" alt="Summary causal graph" src="https://github.com/user-attachments/assets/0e4ca3fe-4557-4a64-9e96-0b08765b9818">
 
 
 As for case study real world dataset, can be download from the link below:
