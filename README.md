@@ -5,7 +5,7 @@ This code is for AAAI submission paper: A-deconfounding-approach-to-climate-mode
 As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
 
 <img width="1310" alt="Process" src="https://github.com/user-attachments/assets/30942574-8fee-4c72-9e9e-54e71bf7daf1">
-![Process](figure/Process.png)
+![Process](figures/Process.png)
 
 ## Deconfounding
 
@@ -13,7 +13,7 @@ First part is most import part as it is the first time to bring some insight fro
 which do not need to assume "All variable are observed". We gonna show our code with the simulation dataset. The simulation dataset is created 
 based on the summary causal graph as Figure(c) below shows.
 
-![Summary causal graph](figure/Summary causal graph.png)
+![Summary causal graph](figures/Summary causal graph.png)
 
 <img width="611" alt="Summary causal graph" src="https://github.com/user-attachments/assets/0e4ca3fe-4557-4a64-9e96-0b08765b9818">
 
@@ -24,7 +24,7 @@ As for case study real world dataset, can be download from the link below:
 
 - NCEP-NCAR reanalysis 1 data portal: https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html
 
-![factor model](figure/factor model.png)
+![factor model](figures/factor model.png)
   
 <img width="919" alt="factor model" src="https://github.com/user-attachments/assets/2c382f0c-b689-4538-a59e-e08325dde1b7">
 
