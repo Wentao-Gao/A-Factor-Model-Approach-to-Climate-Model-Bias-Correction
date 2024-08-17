@@ -15,21 +15,38 @@ As descriped in the paper, our method is devided into two part, 'Deconfounding' 
 ![Figure1](figures/Process_final.png)
 
 
-## Data preparation
+## Data Preparation
 
-For simulation data, the first step Deconfounding you can simply run:
+### Simulation Data
 
-```python
-python main_run_simulation.py
-```
+To generate simulation data for Deconfounding, follow these steps:
 
-You will get the simulated dataset from two source and combine data csv file. After training, you will get a .pkl file.
+1. Run the following command to generate the simulated datasets:
 
+    ```python
+    python main_run_simulation.py
+    ```
 
+   This will produce the simulated datasets from two sources and combine them into a CSV file. After the training process, a `.pkl` file will be generated.
 
+2. To process the results and convert them into a CSV file, run:
 
+    ```python
+    python result_process.py 
+    ```
 
-As for
+### Real-World Data
+
+For real-world data, download the necessary datasets from the following sources:
+
+- **IPSL Data Portal:** [IPSL CMIP6 Data](https://aims2.llnl.gov/search/cmip6)
+- **NCEP-NCAR Reanalysis 1 Data Portal:** [NCEP-NCAR Reanalysis](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+
+For both datasets, select all variables at the surface level and at 2 meters, and download the monthly data. The data will be in `.nc` (NetCDF) format. Convert these `.nc` files to CSV format, and extract the relevant data for South Australia.
+
+**Note:** For IPSL data, you'll need to download all experimental settings, ranging from `r1p1i1f1` to `r33p1i1f1`.
+
+After obtaining the South Australia CSV file, remove any columns with a significant amount of missing data.
 
 
 
