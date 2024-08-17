@@ -49,13 +49,20 @@ The first part, Deconfounding, is crucial as it introduces insights from deconfo
 
 <img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="70%">
 
-For the case study using real-world data, you can download the datasets from the links below:
-
-- IPSL Data Portal: [IPSL CMIP6 Data](https://aims2.llnl.gov/search/cmip6)
-- NCEP-NCAR Reanalysis 1 Data Portal: [NCEP-NCAR Reanalysis](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+And our Deconfounding BC factor model structure can be show as figure below:
 
 <img src="figures/factor%20model.png" alt="Factor Model" width="70%">
 
 ## Correction
 
-The second part, Correction, involves using the latent confounder learned in the Deconfounding step as an additional feature for precipitation correction. As described in the paper, we chose the state-of-the-art model, iTransformer, to perform this step. The implementation can be found at [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
+The second part, Correction, involves using the latent confounder learned in the Deconfounding step as an additional feature for precipitation correction. As described in the paper, we chose the state-of-the-art model, iTransformer, to perform this step. The implementation can be found in Correction folder. 
+
+After you processed the data already. You can put the data into dataset/weather folder. And simply run 
+
+```
+bash ./scripts/multivariate_forecasting/Weather/bc_iTransformer.sh
+```
+
+Notice this part is based omn the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
+
+
