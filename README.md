@@ -14,7 +14,7 @@ which do not need to assume "All variable are observed". We gonna show our code 
 based on the summary causal graph as Figure(c) below shows.
 
 
-![Figure2](figures/Summary%20causal%20graph.png)
+![Figure2](figures/Summary%20causal%20graph%20final.png)
 
 As for case study real world dataset, can be download from the link below:
 
