@@ -49,6 +49,10 @@ The first part, Deconfounding, is crucial as it introduces insights from deconfo
 
 <img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="70%">
 
+To better understand the Deconfounding BC factor model. Let's have a look at the graph.
+
+<img src="figures/double_source.png" alt="Double Source" width="70%">
+
 And our Deconfounding BC factor model structure can be show as figure below:
 
 <img src="figures/factor%20model.png" alt="Factor Model" width="70%">
