@@ -4,11 +4,13 @@ This code is for AAAI submission paper: A-deconfounding-approach-to-climate-mode
 
 Our study area is South Australia.
 
+![Figure](figures/Study_area_NCEP_final.png)
+
 
 
 As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
 
-![Figure1](figures/Process20final.png)
+![Figure1](figures/Process_final.png)
 
 
 ## Deconfounding
@@ -18,7 +20,7 @@ which do not need to assume "All variable are observed". We gonna show our code 
 based on the summary causal graph as Figure(c) below shows.
 
 
-![Figure2](figures/Summary%20causal%20graph%20final.png)
+![Figure2](figures/Summary%20causal%20graph_final.png)
 
 As for case study real world dataset, can be download from the link below:
 
