@@ -2,9 +2,13 @@
 
 This code is for AAAI submission paper: A-deconfounding-approach-to-climate-model-bias-correction
 
+Our study area is South Australia.
+
+
+
 As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
 
-![Figure1](figures/Process.png)
+![Figure1](figures/Process20final.png)
 
 
 ## Deconfounding
