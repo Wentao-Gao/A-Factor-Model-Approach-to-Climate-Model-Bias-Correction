@@ -63,6 +63,6 @@ After you processed the data already. You can put the data into dataset/weather 
 bash ./scripts/multivariate_forecasting/Weather/bc_iTransformer.sh
 ```
 
-Notice this part is based omn the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
+Notice this part is based on the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
 
 
