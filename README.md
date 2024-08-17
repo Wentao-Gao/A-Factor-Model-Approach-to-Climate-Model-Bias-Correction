@@ -4,11 +4,11 @@ This repository contains the code for our AAAI submission paper: "A Deconfoundin
 
 Our study area is South Australia.
 
-<img src="figures/Study_area_NCEP_final.png" alt="Study Area" width="70%">
+<img src="figures/Study_area_NCEP_final.png" alt="Study Area" width="50%">
 
 As described in the paper, our method is divided into two parts: 'Deconfounding' and 'Correction'.
 
-<img src="figures/Process_final.png" alt="Process Overview" width="70%">
+<img src="figures/Process_final.png" alt="Process Overview" width="50%">
 
 ## Data Preparation
 
@@ -47,15 +47,15 @@ After obtaining the South Australia CSV file, remove any columns with a signific
 
 The first part, Deconfounding, is crucial as it introduces insights from deconfounding in causal inference to climate bias correction. Unlike traditional methods, it does not assume that all variables are observed. We demonstrate our approach using a simulation dataset, which is created based on the summary causal graph shown below:
 
-<img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="70%">
+<img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="50%">
 
 To better understand the Deconfounding BC factor model. Let's have a look at the graph.
 
-<img src="figures/double_source.png" alt="Double Source" width="70%">
+<img src="figures/double_source.png" alt="Double Source" width="30%">
 
 And our Deconfounding BC factor model structure can be show as figure below:
 
-<img src="figures/factor%20model.png" alt="Factor Model" width="70%">
+<img src="figures/factor%20model.png" alt="Factor Model" width="60%">
 
 ## Correction
 
