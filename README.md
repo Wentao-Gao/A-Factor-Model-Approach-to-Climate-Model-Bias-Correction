@@ -4,13 +4,33 @@ This code is for AAAI submission paper: A-deconfounding-approach-to-climate-mode
 
 Our study area is South Australia.
 
-![Figure](figures/Study_area_NCEP_final.png)
+
+
+<img src="figures/Study_area_NCEP_final.png" alt="Figure" width="70%">
 
 
 
 As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
 
 ![Figure1](figures/Process_final.png)
+
+
+## Data preparation
+
+For simulation data, the first step Deconfounding you can simply run:
+
+```python
+python main_run_simulation.py
+```
+
+You will get the simulated dataset from two source and combine data csv file. After training, you will get a .pkl file.
+
+
+
+
+
+As for
+
 
 
 ## Deconfounding
