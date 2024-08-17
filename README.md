@@ -1,19 +1,14 @@
-# A-deconfounding-approach-to-climate-model-bias-correction
+# A Deconfounding Approach to Climate Model Bias Correction
 
-This code is for AAAI submission paper: A-deconfounding-approach-to-climate-model-bias-correction
+This repository contains the code for our AAAI submission paper: "A Deconfounding Approach to Climate Model Bias Correction."
 
 Our study area is South Australia.
 
+<img src="figures/Study_area_NCEP_final.png" alt="Study Area" width="70%">
 
+As described in the paper, our method is divided into two parts: 'Deconfounding' and 'Correction'.
 
-<img src="figures/Study_area_NCEP_final.png" alt="Figure" width="70%">
-
-
-
-As descriped in the paper, our method is devided into two part, 'Deconfounding' and 'Correction'
-
-![Figure1](figures/Process_final.png)
-
+<img src="figures/Process_final.png" alt="Process Overview" width="70%">
 
 ## Data Preparation
 
@@ -48,28 +43,19 @@ For both datasets, select all variables at the surface level and at 2 meters, an
 
 After obtaining the South Australia CSV file, remove any columns with a significant amount of missing data.
 
-
-
 ## Deconfounding
 
-First part is most import part as it is the first time to bring some insight from deconfounding in causal inference to climate bias correction
-which do not need to assume "All variable are observed". We gonna show our code with the simulation dataset. The simulation dataset is created 
-based on the summary causal graph as Figure(c) below shows.
+The first part, Deconfounding, is crucial as it introduces insights from deconfounding in causal inference to climate bias correction. Unlike traditional methods, it does not assume that all variables are observed. We demonstrate our approach using a simulation dataset, which is created based on the summary causal graph shown below:
 
+<img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="70%">
 
-![Figure2](figures/Summary%20causal%20graph_final.png)
+For the case study using real-world data, you can download the datasets from the links below:
 
-As for case study real world dataset, can be download from the link below:
+- IPSL Data Portal: [IPSL CMIP6 Data](https://aims2.llnl.gov/search/cmip6)
+- NCEP-NCAR Reanalysis 1 Data Portal: [NCEP-NCAR Reanalysis](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
 
-- IPSL data portal: https://aims2.llnl.gov/search/cmip6
+<img src="figures/factor%20model.png" alt="Factor Model" width="70%">
 
-- NCEP-NCAR reanalysis 1 data portal: https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html
+## Correction
 
-![factor model](figures/factor%20model.png)
-  
-
-## Correcrtion
-
-Second part is correction which is trying to used the latent confounder learnt by deconfounding part as an additional feature for precipitation 
-correction. As descriped in the paper, we choose the SOTA model iTransformer to perform this step. Implementation is given in https://github.com/thuml/iTransformer.
-
+The second part, Correction, involves using the latent confounder learned in the Deconfounding step as an additional feature for precipitation correction. As described in the paper, we chose the state-of-the-art model, iTransformer, to perform this step. The implementation can be found at [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
