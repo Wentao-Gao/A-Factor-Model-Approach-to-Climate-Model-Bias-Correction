@@ -1,4 +1,4 @@
-# A Deconfounding Approach to Climate Model Bias Correction
+# Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction
 
 This repository contains the code for our IJCAI submission paper: "Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to
 Climate Model Bias Correction."
