@@ -1,6 +1,7 @@
 # A Deconfounding Approach to Climate Model Bias Correction
 
-This repository contains the code for our AAAI submission paper: "A Deconfounding Approach to Climate Model Bias Correction."
+This repository contains the code for our IJCAI submission paper: "Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to
+Climate Model Bias Correction."
 
 Our study area is South Australia.
 
