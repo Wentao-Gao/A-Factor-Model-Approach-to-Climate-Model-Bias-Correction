@@ -9,7 +9,7 @@ Our study area is South Australia.
 
 As described in the paper, our method is divided into two parts: 'Deconfounding' and 'Correction'.
 
-<img src="figures/Process_final.png" alt="Process Overview" width="50%">
+<img src="figures/Process_final_2.png" alt="Process Overview" width="50%">
 
 ## Data Preparation
 
