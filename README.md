@@ -68,6 +68,27 @@ After you processed the data already. You can put the data into dataset/weather 
 bash ./scripts/multivariate_forecasting/Weather/bc_iTransformer.sh
 ```
 
+## Parameters and Configurations
+
+### Deconfounding
+- Hidden Units: 128
+- Learning Rate: 0.001
+- Batch Size: 16
+- Training Epochs: 50
+- RNN Dropout Probability: 0.8
+- Gamma Parameter ($\gamma$): 0.6
+
+### Correction (iTransformer)
+- History Length: 36
+- Prediction Length: 3
+- Input Dimensions: 55
+- Batch Size: 8
+- Learning Rate: 0.0001
+- Random Seed: 2024
+
+For more details on these parameters, refer to the configuration files and scripts in the repository.
+
+
 Notice this part is based on the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
 
 
