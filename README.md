@@ -68,27 +68,36 @@ After you processed the data already. You can put the data into dataset/weather 
 bash ./scripts/multivariate_forecasting/Weather/bc_iTransformer.sh
 ```
 
+
+Notice this part is based on the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
+
 ## Parameters and Configurations
 
 ### Deconfounding
-- Hidden Units: 128
-- Learning Rate: 0.001
-- Batch Size: 16
-- Training Epochs: 50
-- RNN Dropout Probability: 0.8
-- Gamma Parameter ($\gamma$): 0.6
+
+| Parameter              | Value   | Description                              |
+|------------------------|---------|------------------------------------------|
+| Hidden Units           | 128     | Number of hidden units in RNN layers     |
+| Learning Rate          | 0.001   | Learning rate for optimizer              |
+| Batch Size             | 16      | Number of samples per batch              |
+| Training Epochs        | 50      | Number of training epochs                |
+| RNN Dropout Probability| 0.8     | Probability to prevent overfitting       |
+| Gamma Parameter ($\gamma$)| 0.6 | Strength of autoregressive process       |
 
 ### Correction (iTransformer)
-- History Length: 36
-- Prediction Length: 3
-- Input Dimensions: 55
-- Batch Size: 8
-- Learning Rate: 0.0001
-- Random Seed: 2024
+
+| Parameter       | Value   | Description                                      |
+|-----------------|---------|--------------------------------------------------|
+| History Length  | 36      | Length of input sequence                        |
+| Prediction Length| 3      | Length of output sequence                       |
+| Input Dimensions| 55      | Number of input features                        |
+| Batch Size      | 8       | Number of samples per batch                     |
+| Learning Rate   | 0.0001  | Learning rate for optimizer                     |
+| Random Seed     | 2024    | Seed for random number generator to ensure reproducibility |
+
 
 For more details on these parameters, refer to the configuration files and scripts in the repository.
 
 
-Notice this part is based on the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
 
 
