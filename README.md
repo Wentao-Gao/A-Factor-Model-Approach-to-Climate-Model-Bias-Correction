@@ -5,7 +5,7 @@ Climate Model Bias Correction."
 
 Our study area is South Australia.
 
-<img src="figures/Study_area_NCEP_final.png" alt="Study Area" width="50%">
+<img src="figures/Study_area_NCEP_final_2.png" alt="Study Area" width="50%">
 
 As described in the paper, our method is divided into two parts: 'Deconfounding' and 'Correction'.
 
