@@ -3,6 +3,8 @@
 This repository contains the code for our IJCAI submission paper: "Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to
 Climate Model Bias Correction."
 
+This paper have been accepted by IJCAI2025.
+
 Our study area is South Australia.
 
 <img src="figures/Study_area_NCEP_2.png" alt="Study Area" width="50%">
