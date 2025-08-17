@@ -1,105 +1,200 @@
-# Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction
+# 🌍 Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction
 
-This repository contains the code for our IJCAI submission paper: "Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to
-Climate Model Bias Correction."
+[![IJCAI 2025](https://img.shields.io/badge/IJCAI-2025-blue.svg)](https://ijcai-25.org/)
+[![Python](https://img.shields.io/badge/Python-3.7+-brightgreen.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This paper have been accepted by IJCAI2025.
+> 🏆 **Accepted at IJCAI 2025**
 
-Our study area is South Australia.
+This repository contains the official implementation of our IJCAI 2025 paper: *"Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction."*
 
-<img src="figures/Study_area_NCEP_2.png" alt="Study Area" width="60%">
+## 📖 Overview
 
-As described in the paper, our method is divided into two parts: 'Deconfounding' and 'Correction'.
+Our innovative approach addresses climate model bias correction through a novel two-stage methodology that leverages causal inference principles. Unlike traditional methods, our approach doesn't assume all confounding variables are observed, making it more robust for real-world climate modeling scenarios.
 
-<img src="figures/Process_final_2.png" alt="Process Overview" width="60%">
+### 🎯 Key Features
 
-## Data Preparation
+- **Novel Deconfounding Approach**: First application of causal inference deconfounding to climate bias correction
+- **Factor Model Architecture**: Advanced latent confounder modeling for unobserved variables
+- **State-of-the-art Performance**: Integration with iTransformer for superior correction results
+- **Real-world Application**: Validated on South Australia climate data
 
-### Simulation Data
+## 🗺️ Study Area
 
-To generate simulation data for Deconfounding, follow these steps:
+Our research focuses on **South Australia**, chosen for its diverse climate patterns and data availability.
 
-1. Run the following command to generate the simulated datasets:
+<div align="center">
+  <img src="figures/Study_area_NCEP_2.png" alt="Study Area - South Australia" width="60%">
+  <p><em>Study Area: South Australia with NCEP grid points</em></p>
+</div>
 
-    ```python
-    python main_run_simulation.py
-    ```
+## 🔄 Methodology
 
-   This will produce the simulated datasets from two sources and combine them into a CSV file. After the training process, a `.pkl` file will be generated.
+Our method is divided into two complementary stages:
 
-2. To process the results and convert them into a CSV file, run:
+<div align="center">
+  <img src="figures/Process_final_2.png" alt="Two-Stage Process Overview" width="70%">
+  <p><em>Overview of our two-stage methodology: Deconfounding + Correction</em></p>
+</div>
 
-    ```python
-    python result_process.py 
-    ```
+### Stage 1: Deconfounding 🧠
+Identifies and models latent confounders using causal inference principles
 
-### Real-World Data
+### Stage 2: Correction 🎯
+Applies bias correction using the learned latent features with iTransformer
 
-For real-world data, download the necessary datasets from the following sources:
+## 📊 Theoretical Foundation
 
-- **IPSL Data Portal:** [IPSL CMIP6 Data](https://aims2.llnl.gov/search/cmip6)
-- **NCEP-NCAR Reanalysis 1 Data Portal:** [NCEP-NCAR Reanalysis](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+### Causal Graph Structure
 
-For both datasets, select all variables at the surface level and at 2 meters, and download the monthly data. The data will be in `.nc` (NetCDF) format. Convert these `.nc` files to CSV format, and extract the relevant data for South Australia.
+Our approach is based on the following summary causal graph:
 
-**Note:** For IPSL data, you'll need to download all experimental settings, ranging from `r1p1i1f1` to `r33p1i1f1`.
+<div align="center">
+  <img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="60%">
+  <p><em>Summary causal graph showing the relationships between variables</em></p>
+</div>
 
-After obtaining the South Australia CSV file, remove any columns with a significant amount of missing data.
+### Double Source Architecture
 
-## Deconfounding
+<div align="center">
+  <img src="figures/double_source.png" alt="Double Source Architecture" width="40%">
+  <p><em>Double source data integration approach</em></p>
+</div>
 
-The first part, Deconfounding, is crucial as it introduces insights from deconfounding in causal inference to climate bias correction. Unlike traditional methods, it does not assume that all variables are observed. We demonstrate our approach using a simulation dataset, which is created based on the summary causal graph shown below:
+### Factor Model Structure
 
-<img src="figures/Summary%20causal%20graph_final.png" alt="Summary Causal Graph" width="60%">
+<div align="center">
+  <img src="figures/factor%20model.png" alt="Deconfounding BC Factor Model" width="100%">
+  <p><em>Detailed structure of our Deconfounding BC factor model</em></p>
+</div>
 
-To better understand the Deconfounding BC factor model. Let's have a look at the graph.
+## 🚀 Quick Start
 
-<img src="figures/double_source.png" alt="Double Source" width="40%">
+### Prerequisites
 
-And our Deconfounding BC factor model structure can be show as figure below:
-
-<img src="figures/factor%20model.png" alt="Factor Model" width="100%">
-
-## Correction
-
-The second part, Correction, involves using the latent confounder learned in the Deconfounding step as an additional feature for precipitation correction. As described in the paper, we chose the state-of-the-art model, iTransformer, to perform this step. The implementation can be found in Correction folder. 
-
-After you processed the data already. You can put the data into dataset/weather folder. And simply run 
-
+```bash
+pip install -r requirements.txt
 ```
+
+### 📁 Data Preparation
+
+#### Option 1: Simulation Data 🎲
+
+Generate synthetic datasets for testing and validation:
+
+```bash
+# Generate simulated datasets
+python main_run_simulation.py
+
+# Process results and convert to CSV
+python result_process.py
+```
+
+#### Option 2: Real-World Data 🌐
+
+Download climate data from official sources:
+
+**Data Sources:**
+- 🌡️ **IPSL CMIP6**: [AIMS2 Portal](https://aims2.llnl.gov/search/cmip6)
+- 🌊 **NCEP-NCAR Reanalysis**: [NOAA Portal](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+
+**Download Instructions:**
+1. Select surface level and 2-meter variables
+2. Download monthly data in NetCDF (`.nc`) format
+3. Convert to CSV format
+4. Extract South Australia region data
+5. Clean datasets by removing columns with excessive missing data
+
+> **📝 Note:** For IPSL data, download all experimental settings from `r1p1i1f1` to `r33p1i1f1`
+
+## 🔬 Stage 1: Deconfounding
+
+The Deconfounding stage introduces causal inference insights to climate bias correction, handling unobserved confounders effectively.
+
+### Running Deconfounding
+
+```bash
+cd Deconfounding/
+python main_deconfounding.py
+```
+
+## 🎯 Stage 2: Correction
+
+The Correction stage leverages the learned latent confounders as additional features for precipitation correction using the state-of-the-art iTransformer model.
+
+### Running Correction
+
+```bash
+# Place processed data in dataset/weather folder
 bash ./scripts/multivariate_forecasting/Weather/bc_iTransformer.sh
 ```
 
+> **🔗 Based on:** [iTransformer Official Repository](https://github.com/thuml/iTransformer)
 
-Notice this part is based on the [iTransformer GitHub Repository](https://github.com/thuml/iTransformer).
+## ⚙️ Configuration
 
-## Parameters and Configurations
+### 🧠 Deconfounding Parameters
 
-### Deconfounding
+| Parameter | Value | Description |
+|-----------|--------|-------------|
+| Hidden Units | `128` | Number of hidden units in RNN layers |
+| Learning Rate | `0.001` | Optimizer learning rate |
+| Batch Size | `16` | Samples per training batch |
+| Training Epochs | `50` | Number of training iterations |
+| RNN Dropout | `0.8` | Dropout probability for regularization |
+| Gamma (γ) | `0.6` | Autoregressive process strength |
 
-| Parameter              | Value   | Description                              |
-|------------------------|---------|------------------------------------------|
-| Hidden Units           | 128     | Number of hidden units in RNN layers     |
-| Learning Rate          | 0.001   | Learning rate for optimizer              |
-| Batch Size             | 16      | Number of samples per batch              |
-| Training Epochs        | 50      | Number of training epochs                |
-| RNN Dropout Probability| 0.8     | Probability to prevent overfitting       |
-| Gamma Parameter ($\gamma$)| 0.6 | Strength of autoregressive process       |
+### 🎯 Correction (iTransformer) Parameters
 
-### Correction (iTransformer)
+| Parameter | Value | Description |
+|-----------|--------|-------------|
+| History Length | `36` | Input sequence length |
+| Prediction Length | `3` | Output sequence length |
+| Input Dimensions | `55` | Number of input features |
+| Batch Size | `8` | Samples per training batch |
+| Learning Rate | `0.0001` | Optimizer learning rate |
+| Random Seed | `2024` | Reproducibility seed |
 
-| Parameter       | Value   | Description                                      |
-|-----------------|---------|--------------------------------------------------|
-| History Length  | 36      | Length of input sequence                        |
-| Prediction Length| 3      | Length of output sequence                       |
-| Input Dimensions| 55      | Number of input features                        |
-| Batch Size      | 8       | Number of samples per batch                     |
-| Learning Rate   | 0.0001  | Learning rate for optimizer                     |
-| Random Seed     | 2024    | Seed for random number generator to ensure reproducibility |
+## 📈 Results and Performance
 
+Our method demonstrates superior performance in climate model bias correction, particularly for precipitation data in South Australia. Detailed results and comparisons with baseline methods are available in our IJCAI 2025 paper.
 
-For more details on these parameters, refer to the configuration files and scripts in the repository.
+## 📚 Citation
 
+If you find this work useful for your research, please cite our paper:
 
+```bibtex
+@misc{gao2025deconfoundingmulticauselatentconfounders,
+      title={Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction}, 
+      author={Wentao Gao and Jiuyong Li and Debo Cheng and Lin Liu and Jixue Liu and Thuc Duy Le and Xiaojing Du and Xiongren Chen and Yanchang Zhao and Yun Chen},
+      year={2025},
+      eprint={2408.12063},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML},
+      url={https://arxiv.org/abs/2408.12063}, 
+}
+```
 
+## 📞 Contact
 
+For questions, issues, or collaborations, please:
+
+- 📧 Open an issue on this repository
+- 📬 Contact the authors directly
+- 🌐 Visit our research group webpage
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- iTransformer team for the excellent transformer implementation
+- NOAA and IPSL for providing high-quality climate datasets
+- The causal inference research community for theoretical foundations
+
+---
+
+<div align="center">
+  <p>⭐ If you find this repository helpful, please give it a star! ⭐</p>
+</div>
