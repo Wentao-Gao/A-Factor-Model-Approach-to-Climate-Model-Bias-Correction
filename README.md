@@ -164,14 +164,19 @@ Our method demonstrates superior performance in climate model bias correction, p
 If you find this work useful for your research, please cite our paper:
 
 ```bibtex
-@misc{gao2025deconfoundingmulticauselatentconfounders,
-      title={Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction}, 
-      author={Wentao Gao and Jiuyong Li and Debo Cheng and Lin Liu and Jixue Liu and Thuc Duy Le and Xiaojing Du and Xiongren Chen and Yanchang Zhao and Yun Chen},
-      year={2025},
-      eprint={2408.12063},
-      archivePrefix={arXiv},
-      primaryClass={stat.ML},
-      url={https://arxiv.org/abs/2408.12063}, 
+@inproceedings{ijcai2025p1071,
+  title     = {Deconfounding Multi-Cause Latent Confounders: A Factor-Model Approach to Climate Model Bias Correction},
+  author    = {Gao, Wentao and Li, Jiuyong and Cheng, Debo and Liu, Lin and Liu, Jixue and Le, Thuc and Du, Xiaojing and Chen, Xiongren and Chen, Yun and Zhao, Yanchang},
+  booktitle = {Proceedings of the Thirty-Fourth International Joint Conference on
+               Artificial Intelligence, {IJCAI-25}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {James Kwok},
+  pages     = {9638--9646},
+  year      = {2025},
+  month     = {8},
+  note      = {AI and Social Good},
+  doi       = {10.24963/ijcai.2025/1071},
+  url       = {https://doi.org/10.24963/ijcai.2025/1071},
 }
 ```
 
